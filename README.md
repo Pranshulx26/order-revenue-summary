@@ -35,13 +35,11 @@ uv run main.py
 
 ```text
 Skipping Bad Row: {'order_id': '6', 'channel': 'Amazon', 'price': 'abc', 'qty': '2'}
-
+Skipping Bad Row: {'order_id': '7', 'channel': 'Amazon', 'price': '500', 'qty': None}
 Total Revenue : 5844
-
 Channel : Amazon | Revenue : 1895
 Channel : Myntra | Revenue : 3299
 Channel : Flipkart | Revenue : 650
-
 Top Channel: Myntra (3299)
 ```
 
