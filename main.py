@@ -1,5 +1,6 @@
 
 import csv
+NUMERIC_FIELDS = ('order_id', 'price', 'qty')
 
 def load_orders(path):
     orders = []
@@ -7,7 +8,6 @@ def load_orders(path):
         reader = csv.DictReader(f)
         for row in reader:
             d = {}
-            NUMERIC_FIELDS = ('order_id', 'price', 'qty')
             try:
                 for key, val in row.items():
                     if key in NUMERIC_FIELDS:
