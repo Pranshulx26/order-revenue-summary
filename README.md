@@ -6,12 +6,17 @@ A Python-based project that reads order data from a CSV file, processes the reco
 
 - Loads order data from `orders.csv`.
 - Handles CSV data and converts numeric fields into appropriate data types.
-- Identifies and skips rows containing invalid numeric values.
+- Identifies and skips rows containing invalid numeric values using try and except (TypeError and ValueError).
 - Calculates and displays total revenue.
 - Calculates revenue for each sales channel.
 - Identifies the channel with the highest revenue.
 
 ## How to Run
+
+### 0. Install uv
+```bash
+pip install uv
+```
 
 ### 1. Clone the Repository
 
@@ -47,18 +52,14 @@ Top Channel: Myntra (3299)
 
 Through this project, I learned:
 
-- **CSV File Handling:** How to read and process CSV files using Python's built-in `csv` module.
-- **Data Type Conversion:** Understanding that CSV data is initially read as strings and learning how to convert numeric fields into integers.
-- **Exception Handling:** Using `try-except` blocks to handle invalid data and skip malformed records without interrupting program execution.
-- **Code Reusability:** Writing reusable functions to avoid code duplication and improve maintainability.
+- **CSV File Handling:** How to read and process CSV files using Python's built-in `csv` module and pandas library.
+- **Data Type Conversion:** Understanding that CSV data is initially read as strings and learning how to convert numeric fields into integers and in pandas it can be handled using pd.to_numeric(col, errors='coerce') and pd.dropna() method.
+- **Exception Handling:** Using `try-except` blocks to handle invalid data and skip malformed records without interrupting program execution and how to use assert statements to throw inline exceptions and something doesn't work as expected.
+- **Code Reusability:** I created a function that calculates the total revenue and if ever there is need to change the formula i only need to change in this function and it's reflected else where.
 - **Dictionary Operations:** Using Python dictionaries to aggregate revenue by sales channel.
 - **Data Aggregation:** Calculating total revenue, revenue by channel, and identifying the highest-performing sales channel.
 
-## Technologies Used
 
-- Python
-- CSV Module
-- UV (Python Package and Project Manager)
 
 ---
 
