@@ -34,6 +34,7 @@ cd order-revenue-summary
 
 ```bash
 uv run main.py
+uv run summary.py
 ```
 
 ## Sample Output
@@ -53,9 +54,9 @@ Top Channel: Myntra (3299)
 Through this project, I learned:
 
 - **CSV File Handling:** How to read and process CSV files using Python's built-in `csv` module and pandas library.
-- **Data Type Conversion:** Understanding that CSV data is initially read as strings and learning how to convert numeric fields into integers and in pandas it can be handled using pd.to_numeric(col, errors='coerce') and pd.dropna() method.
+- **Data Type Conversion:** Understanding that CSV data is initially read as strings and learning how to convert numeric fields into integers and in pandas it can be handled using pd.to_numeric(col, errors='coerce') and df.dropna() method.
 - **Exception Handling:** Using `try-except` blocks to handle invalid data and skip malformed records without interrupting program execution and how to use assert statements to throw inline exceptions and something doesn't work as expected.
-- **Code Reusability:** I created a function that calculates the total revenue and if ever there is need to change the formula i only need to change in this function and it's reflected else where.
+- **Code Reusability:** I created a function that calculates the revenue (line_total) and if ever there is need to change the formula i only need to change in this function and it's reflected else where.
 - **Dictionary Operations:** Using Python dictionaries to aggregate revenue by sales channel.
 - **Data Aggregation:** Calculating total revenue, revenue by channel, and identifying the highest-performing sales channel.
 
